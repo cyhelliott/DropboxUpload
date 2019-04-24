@@ -1,0 +1,101 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.example.efcodechallenge.fragment.UploadImageFragment">
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+        <RelativeLayout
+                android:id="@+id/rl_file_chooser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+        >
+            <TextView android:id="@+id/tv_choose_file"
+                      android:layout_centerHorizontal="true"
+                      android:textSize="24sp"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Please choose your file"
+                      android:textColor="@color/select_file_color"/>
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_choose_file"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dimen_10_dp">
+                <Button android:id="@+id/btn_file"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10_dp"
+                        android:paddingLeft="@dimen/dimen_5_dp"
+                        android:paddingRight="@dimen/dimen_5_dp"
+                        android:bottomRightRadius="@dimen/dimen_10_dp"
+                        android:bottomLeftRadius="@dimen/dimen_10_dp"
+                        android:topLeftRadius="@dimen/dimen_10_dp"
+                        android:topRightRadius="@dimen/dimen_10_dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/white_color"
+                        android:background="@color/select_file_color"
+                        android:text="@string/select_file"/>
+                <TextView
+                        android:id="@+id/tv_file_path"
+                        android:layout_width="wrap_content"
+                        android:lines="2"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/no_file_selected"
+                        android:layout_toRightOf="@id/btn_file"/>
+                <ImageView
+                        android:id="@+id/iv_cancel_file_path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/cancel_file_path"
+                        android:scaleX=".6"
+                        android:scaleY=".6"
+                        android:layout_alignParentRight="true"
+                />
+                />
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <RelativeLayout android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10_dp"
+                        android:layout_below="@+id/rl_file_chooser"
+                        android:background="#c0cfe8">
+            <TextView
+                    android:id="@+id/tv_recently_uploaded"
+                    android:textSize="22dp"
+                    android:padding="5dp"
+                    android:text="Recently Uploaded"
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/dimen_10_dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            />
+            <ImageView android:id="@+id/iv_upload_display"
+                       android:layout_width="@dimen/dimen_600_dp"
+                       android:layout_height="@dimen/dimen_600_dp"
+                       android:scaleX=".8"
+                       android:scaleY=".8"/>
+            <ProgressBar android:id="@+id/pb_upload"
+                         android:visibility="gone"
+                         style="@android:style/Widget.ProgressBar.Horizontal"
+                         android:layout_centerInParent="true"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/tv_percent_uploaded"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerInParent="true"
+                      android:layout_marginBottom="@dimen/dimen_10_dp"
+                      />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>
